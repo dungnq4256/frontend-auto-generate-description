@@ -1,0 +1,73 @@
+.StatisticScreen {
+    .overlay-button-wrapper {
+        border: 1px solid #fff;
+        border-radius: 3px;
+        transition: all ease 0.3s;
+        &:hover {
+            border: 1px solid #0088ff;
+            background-color: rgb(226, 238, 255);
+        }
+        &:active {
+            border: 1px solid #0088ff;
+            background-color: rgb(226, 238, 255);
+        }
+    }
+    #overlay-button {
+        cursor: pointer;
+        user-select: none;
+        font-size: 0.9rem;
+    }
+
+    #dropdownMenuFilter {
+        display: none;
+
+        &:checked ~ #overlay {
+            visibility: visible;
+        }
+    }
+
+    #overlay {
+        position: absolute;
+        opacity: 1;
+        top: 5rem;
+        right: 3rem;
+        width: 20rem;
+        visibility: hidden;
+        z-index: 100;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+        &.active {
+            visibility: visible;
+        }
+        .option-element {
+            cursor: pointer;
+            font-size: 0.9rem;
+            border: 1px solid #68b8ff;
+            &:hover,
+            &_active {
+                border: 1px solid #0088ff;
+                background-color: rgb(240, 246, 255);
+                color: #0088ff;
+            }
+        }
+        .react-datepicker-wrapper {
+            width: 100%;
+            .react-datepicker_input {
+                font-size: 0.8rem;
+                letter-spacing: 0.5px;
+                text-align: center;
+                border: 1px solid #68b8ff;
+                &:hover,
+                &:focus {
+                    outline: none;
+                    background-color: rgb(240, 246, 255);
+                    color: #0088ff;
+                    border: 1px solid #0088ff;
+                }
+            }
+        }
+    }
+    .statistic-data {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+}

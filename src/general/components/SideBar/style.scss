@@ -1,0 +1,50 @@
+.SideBar {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    min-height: 100vh;
+    background-color: #202B46;
+    transition: ease 0.5s;
+    box-sizing: border-box;
+    i {
+        color: #afafaf;
+    }
+}
+
+.LogoSideBar{
+    display: flex;
+    margin: 0 5rem 0 1.5rem;
+}
+
+
+.MenuItem{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #323C55;
+    border-radius: 0.2rem;
+    margin: 0.3rem 0.4rem;
+    padding: 0.8rem 1rem 0.8rem 0.4rem;
+    font-size: 0.8rem;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.03rem;
+    transition: ease 0.2s;
+    i{
+        font-size: 1.6rem;
+        padding: 0.3rem 1rem;
+        color: #fff;
+    }
+    .MenuItemName{
+        font-weight: 450;
+    }
+
+    &:hover{
+        background-color: #3E97FF;
+    }
+
+    &_active{
+        color: #fff;
+        background-color:#3E97FF;
+    }
+}

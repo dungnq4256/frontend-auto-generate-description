@@ -1,0 +1,68 @@
+.btn-back {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #747c87;
+}
+
+.wrapper-desc {
+    display: inline-flex;
+}
+.wrapper-desc .option {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 15px;
+    cursor: pointer;
+    padding: 6px 2px 6px 12px;
+    // border: 1px solid #0088ff;
+    transition: all 0.3s ease;
+}
+.wrapper-desc .option .dot {
+    height: 16px;
+    width: 16px;
+    background: #bdbdbd;
+    border-radius: 50%;
+    position: relative;
+}
+.wrapper-desc .option .dot::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    background: #0088ff;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+input[type="checkbox"] {
+    display: none;
+}
+//   #option-1:checked:checked ~ .option-1,
+//   #option-2:checked:checked ~ .option-2{
+//     border-color: #0088ff;
+//     background: #0088ff;
+//   }
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot {
+    background: #fff;
+    border: 1px solid #0088ff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before {
+    opacity: 1;
+    transform: scale(1);
+}
+.wrapper-desc .option span {
+    margin-left: 0.4rem;
+    font-size: 0.8rem;
+    color: #9b9b9b;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span {
+    color: #0088ff;
+}
+
